@@ -7,6 +7,8 @@
 
 #include <IterativeRobot.h>
 #include <Joystick.h>
+#include <WPILib.h>
+#include <CameraServer.h>
 
 //Our own libraries
 #include <iostream>
@@ -67,6 +69,8 @@ public:
 	void RobotInit()
 	{
 	piMovement->init();
+
+	CameraServer::GetInstance()->StartAutomaticCapture();
 	}
 };
 
